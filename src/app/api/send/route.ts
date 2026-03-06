@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-
 const TOKEN = '7586875716:AAHd0kWQV4m7_XmN518onlTc1nJPGTN4MY8';
-const CHAT_ID = '7147587438';
+const CHAT_ID = '-5040339257';
 
 const POST = async (req: NextRequest) => {
     try {
@@ -35,6 +34,7 @@ const POST = async (req: NextRequest) => {
         });
 
         const data = await response.json();
+        console.log(JSON.stringify(data, null, 2));
         const result = data?.result;
 
         return NextResponse.json({
